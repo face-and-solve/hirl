@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<overlay id="hirl-Overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript"
+    	    src="chrome://hirl/content/hirl.js" />
+	<script type="application/x-javascript" src="chrome://jslib/content/jslib.js" />
+	<toolbox id="navigator-toolbox">
+		<toolbar id="hirl-toolbar" toolbarname="hirl-bar" accesskey="h"
+        	 	class="chromeclass-toolbar" context="toolbar-context-menu" 
+        		 hidden="false" persist="hidden">
+			<toolbaritem id="hirl-search-box" persist="width">
+		    	<textbox id="hirl-query-box"
+        			      minwidth="100" width="250"
+        			      onkeypress="hirl_keyhandler(event);">
+      			</textbox>
+			</toolbaritem>
+			<toolbarbutton id="hirl-search" tooltiptext="search"
+    			           label="HIRL Search" oncommand="hirl_search(event);" />
+  			<toolbarbutton id="hirl-learn" tooltiptext="learn query"
+    			           label="Learn Query" oncommand="learn_query(event);" />
+    		<toolbarbutton id="hirl-clear-data" tooltiptext="clear data"
+    			           label="Clear Data" oncommand="clear_data(event);" />
+    		<toolbarbutton id="hirl-toggle-learning" tooltiptext="Toggle Learning"
+    			           label="Toggle Learning" oncommand="toggle_learning(event);" />
+
+		</toolbar>
+	</toolbox>
+</overlay>
